@@ -9,7 +9,7 @@ const WeatherWidget = ({ location }) => {
       if (location.lat && location.lng) {
         try {
           const response = await fetch(
-            `https://api.weatherapi.com/v1/current.json?key=YOUR_API_KEY&q=${location.lat},${location.lng}`
+            `https://api.openweathermap.org/data/2.5/weather?lat=${location.lat}&lon=${location.lng}&units=metric&appid=954d5dcd4c64828720c1c3f211010601`
           );
           const data = await response.json();
           setWeather(data);
@@ -23,12 +23,11 @@ const WeatherWidget = ({ location }) => {
 
   return (
     <div className="weather-widget">
-      {weather && weather.location && weather.current ? (
+      {weather ? (
         <>
-          <h4>{weather.location.name}</h4>
-          <p>
-            {weather.current.temp_c}°C, {weather.current.condition.text}
-          </p>
+          <h4>{weather.name}</h4>
+          <p>{weather.main.temp}°C</p>
+          <p>{weather.weather[0].description}</p>
         </>
       ) : (
         <p>Loading weather...</p>

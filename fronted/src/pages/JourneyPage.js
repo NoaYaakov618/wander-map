@@ -55,7 +55,7 @@ function JourneyPage() {
 
   // Custom icon URL
   const customIcon = L.icon({
-    iconUrl: "C:Users\\noayawander-map\\fronted\\public\\img\\icon.png", // Path to your custom icon image
+    iconUrl: "/img/icon.png", // Relative path from the public directory
     iconSize: [32, 32], // Size of the icon
     iconAnchor: [16, 32], // Anchor position of the icon
     popupAnchor: [0, -32], // Popup anchor position
@@ -65,14 +65,15 @@ function JourneyPage() {
     <div className="journey-page">
       <h1>{journey.title}</h1>
       <p>{journey.description}</p>
-
-      <div className="journey-images">
-        {journey.image_filename && (
-          <img src={`/uploads/${journey.image_filename}`} alt="Journey" />
-        )}
-      </div>
-      <div className="weather">
-        <WeatherWidget location={location} />
+      <div className="journey-details">
+        <div className="journey-images">
+          {journey.image_filename && (
+            <img src={`/uploads/${journey.image_filename}`} alt="Journey" />
+          )}
+        </div>
+        <div className="weather">
+          <WeatherWidget location={location} />
+        </div>
       </div>
       <div className="journey-map">
         <MapContainer

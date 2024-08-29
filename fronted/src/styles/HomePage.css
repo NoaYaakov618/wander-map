@@ -1,20 +1,70 @@
+/* HomePage.css */
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Nice readable font */
+}
+
 .home-page {
   text-align: center;
-  padding: 20px;
+  padding: 40px;
+  background-color: #f9f9f9; /* Light background for contrast */
+  color: #333; /* Dark text color for readability */
+}
+
+.home-page h1 {
+  font-size: 36px;
+  color: #003566;
+  margin-bottom: 30px;
+}
+
+.home-page p {
+  font-size: 20px;
+  line-height: 1.6;
+  margin: 0 0 30px 0;
 }
 
 .journey-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  gap: 20px; /* Add space between cards */
 }
 
 .journey-list .journey-card {
   flex-basis: 45%;
-  margin-bottom: 20px;
+  max-width: 500px; /* Limit the max-width of each card */
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Ensure content does not overflow */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.journey-list .journey-card:hover {
+  transform: scale(1.02); /* Slight zoom on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .journey-list .journey-card img {
-  max-height: 200px;
+  width: 100%; /* Make image fit the width of the card */
+  height: auto;
+  max-height: 250px; /* Increased height for a better view */
   object-fit: cover;
+}
+
+.journey-list .journey-card .card-content {
+  padding: 20px;
+  text-align: left;
+}
+
+.journey-list .journey-card .card-content h2 {
+  font-size: 24px;
+  color: #003566;
+  margin-bottom: 10px;
+}
+
+.journey-list .journey-card .card-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666;
 }

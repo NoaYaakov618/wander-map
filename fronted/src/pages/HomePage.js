@@ -42,7 +42,9 @@ function HomePage() {
       <div className="journey-list">
         {journeys.map((journey) => (
           <Link key={journey.id} to={`/journey/${journey.id}`}>
-            <JourneyCard journey={journey} />
+            <div className="journey-card">
+              <JourneyCard journey={journey} />
+            </div>
           </Link>
         ))}
       </div>
