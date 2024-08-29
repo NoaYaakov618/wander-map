@@ -1,0 +1,20 @@
+([
+    {
+      id: 1,
+      title: "Exploring the Alps",
+      description: "A journey through the breathtaking landscapes of the Alps.",
+      image_filename: "/img/Alps.jpeg",
+    },
+    {
+      id: 2,
+      title: "Safari in Kenya",
+      description: "An unforgettable safari adventure in the heart of Kenya.",
+      image_filename: "/img/Kenya.jpeg",
+    },
+    {
+      id: 3,
+      title: "Cultural Tour of Japan",
+      description: "Discover the rich culture and history of Japan.",
+      image_filename: "/img/Japan.jpg",
+    },
+  ]);
